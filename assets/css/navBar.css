@@ -1,0 +1,171 @@
+/* Projeto base navbar */
+/* https://github.com/tigercodes-io/navbar */
+
+a {
+  color: var(--white);
+  text-decoration: none !important;
+  transition: 0.3s;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.logoImg {
+  width:  50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0px 10px;
+}
+
+.ajustaLogo {
+  display: flex;
+  align-items: inherit;
+}
+
+nav {
+  display: flex;
+  height: 60px;
+  background-color: var(--dark_blue);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
+  z-index: 1;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.nav-list li {
+  margin: 0 5px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.nav-list li a.active,
+.nav-list li a:hover {
+  color: var(--green);
+}
+
+.nav-list li:last-child{
+  margin-left: 50px;
+}
+
+nav .menu-btn i {
+  color: var(--white);
+  cursor: pointer;
+  display: none;
+}
+
+/* Botão de login */
+nav li .login-btn a {
+  padding: 0;
+}
+
+nav li .login-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--dark_gray);
+  border: 3px solid var(--white);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+nav li .login-btn:hover {
+  border: 3px solid var(--green);
+}
+
+nav li .login-btn a:hover {
+  color: var(--white)
+}
+/* Fim do botão */
+
+/* fim barra de nav */
+@media (max-width: 999px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .ajustaLogo {
+    margin-left: -7vh;
+  }
+
+  .logoImg {
+    display: none;
+  }
+
+  nav {
+    position: fixed;
+    padding: 0 40px 0 100px;
+    width: 100%;
+    align-items: center;
+  }
+
+  nav .menu-btn i {
+    display: block;
+  }
+
+  nav .nav-list {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    background-color: var(--dark_gray);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  nav ul.open {
+    left: 0;
+  }
+
+  .nav-list li {
+    width: 100%;
+    margin: 50px 0;
+  }
+
+  .nav-list li a {
+    font-size: 23px;
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+  }
+
+  /* Botão de login */
+  nav .login-btn {
+    width: 150px;
+    margin: auto;
+  }
+
+  .nav-list li:last-child{
+    margin: auto;
+  }
+
+  /* fim do botão */
+}
