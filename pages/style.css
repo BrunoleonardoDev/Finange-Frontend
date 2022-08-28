@@ -236,9 +236,16 @@ p{
     }
 }
 
-@media (max-width: 609px){
+@media (max-width: 410px){
+    body{
+        background-image: url(../assets/img/bg-mobile-410px.png);
+    }
+
+} 
+
+@media (max-width: 375px){
     body{
         background-image: url(../assets/img/bg-mobile-375px.png);
     }
 
-}    
+}  
