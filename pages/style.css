@@ -236,7 +236,9 @@ p{
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 450px){
     body{
         background-image: url(../assets/img/bg-mobile-375px.png);
     }
+
+}    
