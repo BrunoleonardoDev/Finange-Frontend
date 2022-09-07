@@ -1,9 +1,9 @@
 
-i{
+.mini-blocos-horizontal i{
     transition: transform 1s;
 }
 
-i:hover{
+.mini-blocos-horizontal i:hover{
     transform: rotateY(720deg);
 }
 

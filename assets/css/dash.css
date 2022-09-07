@@ -45,6 +45,7 @@ i{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .header{
@@ -52,52 +53,47 @@ i{
     filter: blur(80deg);
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     filter: blur(45deg);
     width: 97.6%;
     height: 7vh;
     border-radius: 0 0 .5rem .5rem;
+    position: relative;
 }
 
-.header a{
+.link a{
     text-decoration: none;
     color: white;
     font-family: 'Open Sans', sans-serif;
     margin-right: 2rem;
 }
 
+.link a:hover{
+    color: #00cf30;
+    border-radius: 1rem;
+    transition: ease-in-out .2s;
+}
+
+.header i{
+    display: none;
+}
+
 .header img{
-    position: absolute;
-    left: 1%;
     display: flex;
     width: 100%;
     max-width: 130px;
-    margin-left: 3rem;
-}
-
-.toggle{
-    display: flex;
-    align-items: center;
-}
-
-.toggle i{
-    position: absolute;
-    right: 30%;
-    color: rgb(218, 203, 203);
-    font-size: 1.5rem;
-    font-weight: 600;
-    width: 50px;
 }
 
 .menu-vertical{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     gap: 1rem;
     width: 100%;
     max-width: 200px;
     background-color: rgba(0, 0, 0, 0.567);
-    filter: blur(360deg);
+    filter: blur(45deg);
     height: 88vh;
     margin: 1rem;
     border-radius: .5rem;
@@ -110,10 +106,9 @@ i{
 
 .bg-menu{
     width: 180px;
-    height: 500px;
+    height: 510px;
     background-color: #181d29;
     border-radius: .5rem;
-    margin-top: .6rem;
 }
 
 .user{
@@ -155,7 +150,6 @@ i{
 }
 
 .change-user{
-    position: absolute;
     width: 180px;
     height: 50px;
     background-color: #181d29;
@@ -172,9 +166,6 @@ i{
     border: none;
     color: white;
     font-size: 1rem;
-}
-
-.change-user a{
     
 }
 
@@ -193,9 +184,8 @@ i{
     background-color: rgba(0, 0, 0, 0.567);
     filter: blur(80deg);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    position: relative;
     width: 100%;
     height: 17vh;
     margin: 1rem 0;
@@ -224,7 +214,7 @@ i{
     border-radius: .5rem;   
     display: flex;
     align-items: center;
-    padding: 1.5rem; 
+    padding: 1.5rem;
 }
 
 .bloco-3{
@@ -325,23 +315,34 @@ i{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 820px;
+        width: 100%;
     }
 
     main{
         width: 100%;
-        
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     .align-header{
-        
+        width: 100%;
+        max-width: 690px;
+        justify-content: space-around;
     }
 
     .header{
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
 
+    .header a{
+        display: none;
+    }
+
+    .header i{
+        display: inherit;
+        font-size: 2.5rem;
     }
 
     .menu-vertical{
@@ -349,44 +350,50 @@ i{
     }
 
     .mini-blocos-horizontal{
-        height: 70px;
+        height: 120px;
         width: 100%;
-        max-width: 485px;
+        max-width: 800px;
         flex-wrap: wrap;
         
     }
+    
     .grid{
+        width: 82%;
+        height: 100%;
+        display: grid;
         display: flex;
-        grid-template-columns: 0;
-        grid-template-rows: 0;
+        align-items: center;
         flex-direction: column;
-        width: 420px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 20vh 50vh 0vh;
+        row-gap: .5rem;
+        column-gap: .8rem;
+        
     }
     
     .blocos{
         width: 100%;
-        max-width: 485px;
     }
 
     .blocos-02{
+        margin-top: .8rem;
         display: flex;
         flex-direction: column;
-        width: 420px;
+        max-width: 650px;
     }
 
     .big-blocos-01{
         width: 100%;
-        max-width: 485px;
+        max-width: 650px;
     }
 
     .big-blocos-02{
         width: 100%;
-        max-width: 485px;
     }
 
     .bloco-1, .bloco-2, .bloco-3, .bloco-4{
-        width: 100px;
-        height: 50px;
+        width: 140px;
+        height: 90px;
         padding: 1rem;
     }
 
@@ -405,5 +412,47 @@ i{
         object-fit: cover;
         right: 0%;
         margin-left: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .header{
+        width: 83%;
+    }
+
+    .mini-blocos-horizontal{
+        height: 40%;
+        flex-wrap: nowrap;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bloco-1, .bloco-2, .bloco-3, .bloco-4{
+        width: 100%;
+        height: 90px;
+        padding: 1rem;
+        margin:0;
+    }
+
+    h2{
+        font-size: 1.8rem;
+    }
+    
+    p{
+        font-size: .8rem;
+    }
+    
+    i{
+        
+        font-size: 2.8rem;
+        color: rgba(255, 255, 255, 0.46);
+        object-fit: cover;
+        right: 0%;
+        margin-left: 1rem;
+    }
+
+    .big-blocos-02{
+        margin-bottom: 2rem;
     }
 }
